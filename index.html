@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Welcome!</title>
+        <link rel="stylesheet" type="text/css" href="design.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="head">
+                <h1>Time and tide stop for none</h1>
+                <p>
+                    To solve all the problems of a normal 
+                    student who has difficulty maintaining
+                    time and periods. Now there is a web
+                    application which will 
+                    take careof all your periods.
+                </p>
+            </div>
+        </div>
+
+
+        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+        
+        <div id="id01" class="login_info">
+            <form class="loginInformation" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
+                    <img src="img1.jpg" alt="Avatar" class="avatar">   
+                </div>
+
+                <div class="cont">
+                    <br>
+                    <label for="uname"><b>Username</b></label><br>
+                    <input type="text" placeholder="Enter username" name="uname" required><br>
+
+                    <label for="psw"><b>Password</b></label><br>
+                    <input tyoe="password" placeholder="Enter Password" name="psw" required><br>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember">Remember me
+                    </label>
+                </div>
+
+                <div class="pass" style="background-color: antiquewhite;">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button><br>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+
+            </form>
+                
+        </div>
+        <script>
+            var login_info=document.getElementById('id01');
+            windows.onclick=function(event){
+                if (event.target == login_info){
+                    login_info.style.display='none';
+
+                }
+            } 
+            
+        </script>
+    </body>
+</html>
