@@ -35,16 +35,56 @@ body{
     padding-top: 30px;
 }
 
-.logbtn:hover{
-    width:400px;
-    height:150px;
-    background-color: #95c5c8;
-}
 .login_info-content{
     background-color: seagreen;
     margin: 5% auto 15% auto;
     border: 2px solid snow;
     width: 45%;
+}
+/*
+.logbtn:visited{
+    text-transform: uppercase;
+    text-decoration: nonw;
+    padding:15px 40px;
+    border-radius: 0%;
+    transition:all .2s;
+    position: relative;
+}*/
+.logbtn{
+    display: inline-block;
+    width:250px; 
+    height:100px; 
+    background-color:#4d5b5c; 
+    color:#f0c0aa; 
+    font-size: xx-large; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    border-radius: 20%;
+    text-align:center; 
+    text-decoration: blanchedalmond; 
+    text-shadow: chartreuse; 
+    position:absolute; 
+    bottom:60; 
+    right:60;
+    border:0px;
+}
+.logbtn::after{
+    border-radius: 20%;
+    content:"";
+    display: inline-block;
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .4s;
+}
+.logbtn-white::after{
+    background-color:#9bb6b8;
+}
+.logbtn:hover::after{
+    transform: scale(1.4);
+    opacity:0;
 }
 
 .close{
@@ -100,4 +140,5 @@ img.avatar{
 span.psw{
     float: right;
     padding:16px;
+    color:black;
 }
