@@ -18,10 +18,11 @@
         </div>
 
 
-        <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+        <button onclick="document.getElementById('id01').style.display='block'" class="logbtn" style="width:300px; height:100px; background-color:#386e72; color:#f0c0aa; font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-radius: 60%;
+        text-align:center; text-decoration: blanchedalmond; text-shadow: chartreuse; position:absolute; bottom:20; right:20;" >Login</button>
         
         <div id="id01" class="login_info">
-            <form class="loginInformation" method="post">
+            <form class="login_info-content animate" method="post">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('id01').style.display='none'" class="close">&times;</span>
                     <img src="img1.jpg" alt="Avatar" class="avatar">   
@@ -30,18 +31,18 @@
                 <div class="cont">
                     <br>
                     <label for="uname"><b>Username</b></label><br>
-                    <input type="text" placeholder="Enter username" name="uname" required><br>
+                    <input type="text" placeholder="Enter username" name="uname" required size="50"><br>
 
                     <label for="psw"><b>Password</b></label><br>
-                    <input tyoe="password" placeholder="Enter Password" name="psw" required><br>
+                    <input type="password" placeholder="Enter Password" name="psw" required size="50" maxlength="22"><br>
 
-                    <button type="submit">Login</button>
+                    <button type="submit" style="width: 100px; height:30px; font-size:larger;">Login</button><br>
                     <label>
                         <input type="checkbox" checked="checked" name="remember">Remember me
                     </label>
                 </div>
 
-                <div class="pass" style="background-color: antiquewhite;">
+                <div class="cont" style="background-color: antiquewhite;">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button><br>
                     <span class="psw">Forgot <a href="#">password?</a></span>
                 </div>
@@ -49,15 +50,5 @@
             </form>
                 
         </div>
-        <script>
-            var login_info=document.getElementById('id01');
-            windows.onclick=function(event){
-                if (event.target == login_info){
-                    login_info.style.display='none';
-
-                }
-            } 
-            
-        </script>
     </body>
 </html>
